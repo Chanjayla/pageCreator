@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.ui-pane {
+    position: fixed;
+    width: 4px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background: #00b2ff;
+    z-index: 9999;
+    color: #fff;
+    font-size: 12px;
+    input {
+        outline: none;
+        border: 1px solid #eee;
+        line-height: 20px;
+    }
+    button {
+        outline: none;
+        background: transparent;
+        border: 0;
+        font-size: 12px;
+    }
+    &-entry {
+        position: relative;
+        width: 50px;
+        padding: 0 10px;
+        margin: 10px 0;
+        height: 30px;
+        line-height: 30px;
+        background: #00b2ff;
+        border-radius: 10px;
+        color: #fff;
+        transition: all .2s ease;
+        text-align: center;
+        transform: translateX(-80px);
+        cursor: pointer;
+        &:hover {
+            margin-right: 5px;
+            background: #2196f3;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #00b2ff;
+            transform: translateY(-50%);
+            background: #fff;
+        }
+        &:hover::after {
+            background: #00b2ff;
+        }
+    }
+    &-part {
+        display: none;
+        position: absolute;
+        width: 300px;
+        height: 100vh;
+        right: 10px;
+        top: 0;
+        border-radius: 5px;
+        background: #fff;
+        border-left: 1px solid #eee;
+        overflow-y: auto;
+    }
+    &-btn {
+        padding: 5px 10px;
+        border-radius: 50%;
+        color: #fff;
+        background: #000;
+    }
+    &-tit {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        color: #666;
+        background: #eee;
+        text-indent: 10px;
+    }
+    .ui-block {
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        input {
+            box-sizing: border-box;
+            padding: 0 5px;
+            flex-grow: 1;
+            line-height: 24px;
+            color: #666;
+        }
+        button {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        label {
+            margin-right: 10px;
+            color: #999;
+        }
+        .ui-btn {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            outline: none;
+            border: 0;
+            background: #00b2ff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background: #2196f3;
+            }
+        }
+        .ui-single-btn {
+            display: block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: #00b2ff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background: #2196f3;
+            }
+        }
+    }
+    .ui-upload {
+        display: flex;
+        flex-wrap: wrap;
+        input {
+            margin-bottom: 10px;
+        }
+    }
+    .ui-preview {
+        width: 100%;
+        margin-bottom: 10px;
+        max-height: 200px;
+        text-align: center;
+        font-size: 0;
+        overflow: auto;
+        img {
+            max-width: 100%;
+        }
+    }
+    .ui-textarea-block {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        p {
+            text-indent: 10px;
+            color: #999;
+            line-height: 2;
+            background: #f5f5f5;
+            font-size: 12px;
+        }
+        .CodeMirror {
+            height: auto;
+        }
+    }
+
+}
+
+.ui-mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: 9998;
+    opacity: .3;
+    
+    &-padding {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(76,175,80,1);
+        z-index: -1;
+    }
+    &-margin {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,87,34,1);
+        z-index: -2;
+    }
+    &-content {
+        width: 100%;
+        height: 100%;
+        background: rgba(3, 169, 244, 1);
+    }
+}
